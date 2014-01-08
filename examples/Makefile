@@ -30,6 +30,7 @@ MakeAll:
 	$(MAKE) -C netevol
 	$(MAKE) -C netinf
 	$(MAKE) -C netstat
+	$(MAKE) -C rcgraphgen
 	$(MAKE) -C testgraph
 
 clean:

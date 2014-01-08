@@ -6,11 +6,14 @@ include ../Makefile.config
 
 all: testSnap
 
-testSnap: testSnap.cpp Snap.o 
-	$(CC) -o testSnap testSnap.cpp Snap.o -I$(CGLIB) $(LDFLAGS) $(LIBS)
+testSnap: testSnap.o Snap.o 
+	$(CC) -o testSnap testSnap.o Snap.o $(RCLIB) -L$(RCOBJ) $(LDFLAGS) $(LIBS) 
+
+testSnap.o: testSnap.cpp
+	$(CC) -c $(CXXFLAGS) testSnap.cpp -L$(RCOBJ) -I$(CGLIB) -I$(RCSRC) -I$(RCOBJ) -I$(RCCBN) -I$(RCGTST)
 
 Snap.o: *.h *.cpp ../glib-core/*.h ../glib-core/*.cpp
-	$(CC) -c $(CXXFLAGS) Snap.cpp -I$(CGLIB)
+	$(CC) -c $(CXXFLAGS) Snap.cpp -L$(RCOBJ) -I$(CGLIB) -I$(RCSRC) -I$(RCOBJ) -I$(RCCBN) -I$(RCGTST)
 
 lib: Snap.o
 	rm -f libsnap.a

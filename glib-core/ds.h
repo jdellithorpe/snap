@@ -2371,6 +2371,7 @@ typedef TVec<TStr> TStrV;
 typedef TVec<TChA> TChAV;
 typedef TVec<TIntPr> TIntPrV;
 typedef TVec<TIntTr> TIntTrV;
+typedef TVec<TUInt64Tr> TUInt64TrV;
 typedef TVec<TIntQu> TIntQuV;
 typedef TVec<TFltPr> TFltPrV;
 typedef TVec<TFltTr> TFltTrV;

@@ -29,7 +29,7 @@ public:
 
   // putting value
   void PutNull(){JsonValType=jvtNull;}
-  void PutBool(const bool& _Bool){JsonValType=jvtBool; Bool=_Bool;}
+  void PutBool(const bool& __Bool){JsonValType=jvtBool; Bool=__Bool;}
   void PutNum(const double& _Num){JsonValType=jvtNum; Num=_Num;}
   void PutStr(const TStr& _Str){JsonValType=jvtStr; Str=_Str;}
   void PutArr(){JsonValType=jvtArr;}
